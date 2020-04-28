@@ -5,6 +5,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    animation: 3s ease-in-out infinite alternate changeColor
 }
 .loader {
     width: 100%;
@@ -18,32 +19,41 @@ body {
     color: #a7a1a1;
     animation: 1s ease-in-out infinite alternate up
 }
-.loader__item:nth-child(2) {
+.loader__item:nth-child(3) {
     animation-delay: .1s;
 }
-.loader__item:nth-child(3) {
+.loader__item:nth-child(4) {
     animation-delay: .2s;
 }
-.loader__item:nth-child(4) {
+.loader__item:nth-child(5) {
     animation-delay: .3s;
 }
-.loader__item:nth-child(5) {
+.loader__item:nth-child(6) {
     animation-delay: .4s;
 }
-.loader__item:nth-child(6) {
+.loader__item:nth-child(7) {
     animation-delay: .5s;
 }
-.loader__item:nth-child(7) {
+.loader__item:nth-child(8) {
     animation-delay: .6s;
 }
-.loader__item:nth-child(8) {
+.loader__item:nth-child(9) {
     animation-delay: .7s;
 }
-.loader__item:nth-child(9) {
+.loader__item:nth-child(10) {
     animation-delay: .8s;
 }
-.loader__item:nth-child(10) {
+.loader__item:nth-child(11) {
     animation-delay: .9s;
+}
+.colorful {
+    animation: 3s ease-in-out infinite alternate changeColor;
+}
+.growing_dot {
+    border-radius: 50%;
+    position: absolute;
+    background: #a7a1a1;
+    animation: 3s ease-in-out infinite alternate grow;
 }
 @keyframes up {
     0% {
@@ -51,5 +61,25 @@ body {
     }
     100% {
         transform: translateY(-50px)
+    }
+}
+@keyframes changeColor {
+    0% {
+        background: #343434;
+    }
+    100% {
+        background: rgb(80, 80, 80);
+    }
+}
+@keyframes grow {
+    0% {
+        height: 2px;
+        width: 2px;
+        transform: translate3d(-200px, -110px, 0);
+    }
+    100% {
+        height: 100px;
+        width: 100px;
+        transform: translate3d(200px, -110px, 0);
     }
 }
